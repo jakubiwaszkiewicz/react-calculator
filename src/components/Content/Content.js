@@ -1,6 +1,8 @@
 import "./Content.css"
 import React, { useState } from "react"
+import NumberBtn from './NumberBtn/NumberBtn'
 const Content = () => {
+
 
 
     return (
