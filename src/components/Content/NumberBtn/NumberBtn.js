@@ -1,9 +1,8 @@
-import Data from "../../data.js"
-
-const NumberBtn = () => {
+import './NumberBtn.css'
+const NumberBtn = ({id}) => {
     return (
-        <div className="flex-container-row numbers">
-
+        <div className="btn">
+            <span>{id}</span>
         </div>
     )
 }

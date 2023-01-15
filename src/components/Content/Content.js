@@ -2,7 +2,9 @@ import "./Content.css"
 import React, { useState } from "react"
 import NumberBtn from './NumberBtn/NumberBtn'
 const Content = () => {
-
+    const data =  [
+        {id:1}, {id:2}, {id:3}, {id:4}, {id:5}, {id:6}, {id:7}, {id:8}, {id:9}, {id:0},
+    ]
 
 
     return (
@@ -10,16 +12,13 @@ const Content = () => {
             <div className="display">serwus</div>
             <div className="flex-container-row">
                 <div className="flex-container-column numbers">
-                    <div className="btn"><span>1</span></div>
-                    <div className="btn"><span>2</span></div>
-                    <div className="btn"><span>3</span></div>
-                    <div className="btn"><span>4</span></div>
-                    <div className="btn"><span>5</span></div>
-                    <div className="btn"><span>6</span></div>
-                    <div className="btn"><span>7</span></div>
-                    <div className="btn"><span>8</span></div>
-                    <div className="btn"><span>9</span></div>
-                    <div className="btn"><span>0</span></div>
+                    {data.map((singleData) => {
+                        return (
+                            <NumberBtn
+                                key={singleData.id}
+                                id={singleData.id}
+                            />
+                    )})}
                 </div>
                     <div className="flex-container-column">
                     <div className="btn">+</div>
