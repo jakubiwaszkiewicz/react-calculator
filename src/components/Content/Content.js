@@ -5,28 +5,28 @@ const Content = () => {
 
     return (
         <div className="content">
-            <div className="display"></div>
-            <div className="ce btn">
-                <span>CE</span>
+            <div className="display">serwus</div>
+            <div className="flex-container-row">
+                <div className="flex-container-column numbers">
+                    <div className="btn"><span>1</span></div>
+                    <div className="btn"><span>2</span></div>
+                    <div className="btn"><span>3</span></div>
+                    <div className="btn"><span>4</span></div>
+                    <div className="btn"><span>5</span></div>
+                    <div className="btn"><span>6</span></div>
+                    <div className="btn"><span>7</span></div>
+                    <div className="btn"><span>8</span></div>
+                    <div className="btn"><span>9</span></div>
+                    <div className="btn"><span>0</span></div>
+                </div>
+                    <div className="flex-container-column">
+                    <div className="btn">+</div>
+                    <div className="btn">-</div>
+                    <div className="btn">*</div>
+                    <div className="btn">/</div>
+                    <div className="btn">CE</div>
+                </div>
             </div>
-            <div className="flex-container">
-                <div className="btn">1</div>
-                <div className="btn">2</div>
-                <div className="btn">3</div>
-                <div className="btn">4</div>
-                <div className="btn">5</div>
-                <div className="btn">6</div>
-                <div className="btn">7</div>
-                <div className="btn">8</div>
-                <div className="btn">9</div>
-                <div className="btn">0</div>
-        </div>
-        <div className="flex-container">
-            <div className="btn">+</div>
-            <div className="btn">-</div>
-            <div className="btn">*</div>
-            <div className="btn">/</div>
-        </div>
         </div>
     );
 }
