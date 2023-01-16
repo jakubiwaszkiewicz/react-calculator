@@ -12,7 +12,7 @@ const Content = () => {
         {id:1}, {id:2}, {id:3}, {id:4}, {id:5}, {id:6}, {id:7}, {id:8}, {id:9}, {id:0},
     ]
     const dataOperators =  [
-        {id:"+"}, {id:"-"}, {id:"*"}, {id:"/"}, {id:"CE"}
+        {id:"+"}, {id:"-"}, {id:"*"}, {id:"/"}
     ]
 
 
@@ -27,12 +27,41 @@ const Content = () => {
         setOperator(prevState)
     }
 
-    useEffect(() => console.log(firstNumbers),[firstNumbers])
-    useEffect(() => console.log(operator),[operator])
+    /*useEffect(() => console.log(firstNumbers),[firstNumbers])
+    useEffect(() => console.log(operator),[operator])*/
 
     const equalClicked = () => {
         const firstNum = parseInt(firstNumbers)
-        const SecondNum = parseInt(secondNumbers)
+        const secondNum = parseInt(secondNumbers)
+        let result = 0
+        const CCleaner = (result) => {
+            setFirstNumbers(result.toString())
+            setSecondNumbers("")
+            setOperator("")
+        }
+        switch(operator) {
+            case "+":
+                result = firstNum + secondNum
+                CCleaner(result)
+                break;
+            case "-":
+                result = firstNum - secondNum
+                CCleaner(result)
+                break;
+            case "*":
+                result = firstNum * secondNum
+                CCleaner(result)
+                break;
+            case "/":
+                result = firstNum / secondNum
+                CCleaner(result)
+                break;
+            default:
+                break;
+        }
+    }
+
+    const operationC = () => {
 
     }
 
@@ -66,6 +95,9 @@ const Content = () => {
                                 changeOperator = {changeOperator}
                             />
                         )})}
+                    <div className="btn" onClick={operationC}>
+                        <span>C</span>
+                    </div>
                 </div>
             </div>
         </div>
