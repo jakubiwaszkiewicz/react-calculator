@@ -1,13 +1,8 @@
 import './NumberBtn.css'
-const NumberBtn = ({id, changeNumbers, firstNumbers}) => {
+const NumberBtn = ({id}) => {
 
     const handleClick = () => {
-        if (firstNumbers.length < 15) {
-            changeNumbers(prevState => {
-                return prevState + id
 
-        })
-        }
     }
 
     return (
