@@ -1,8 +1,7 @@
-import './NumberBtn.css'
-const NumberBtn = ({id}) => {
+const OperatorBtn = ({id, changeOperator}) => {
 
     const handleClick = () => {
-
+        changeOperator(id)
     }
 
     return (
@@ -11,4 +10,4 @@ const NumberBtn = ({id}) => {
         </div>
     )
 }
-export default NumberBtn
+export default OperatorBtn
