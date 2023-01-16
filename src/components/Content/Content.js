@@ -27,8 +27,8 @@ const Content = () => {
         setOperator(prevState)
     }
 
-    /*useEffect(() => console.log(firstNumbers),[firstNumbers])
-    useEffect(() => console.log(operator),[operator])*/
+    useEffect(() => console.log(firstNumbers),[firstNumbers])
+    useEffect(() => console.log(operator),[operator])
 
     const equalClicked = () => {
         const firstNum = parseInt(firstNumbers)
@@ -62,12 +62,14 @@ const Content = () => {
     }
 
     const operationC = () => {
-
+        setFirstNumbers("")
+        setSecondNumbers("")
+        setOperator("")
     }
 
     return (
         <div className="content">
-            <div className="display"><span>{secondNumbers === "" ? firstNumbers : secondNumbers}</span></div>
+            <div className="display"><span>{secondNumbers === "" ? (firstNumbers === "" ? "" : firstNumbers) : secondNumbers}</span></div>
             <div className="flex-container-row">
                 <div className="flex-container-column numbers">
                     {data.map((singleData) => {
