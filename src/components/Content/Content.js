@@ -86,8 +86,8 @@ const Content = () => {
                     )})}
                 </div>
                 <div className="flex-container-column">
-                    <div className="btn" onClick={equalClicked}>
-                        <span>=</span>
+                    <div className="btn" onClick={operationC}>
+                        <span>C</span>
                     </div>
                     {dataOperators.map((singleData) => {
                         return (
@@ -97,8 +97,8 @@ const Content = () => {
                                 changeOperator = {changeOperator}
                             />
                         )})}
-                    <div className="btn" onClick={operationC}>
-                        <span>C</span>
+                    <div className="btn" onClick={equalClicked}>
+                        <span>=</span>
                     </div>
                 </div>
             </div>
