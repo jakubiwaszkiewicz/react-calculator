@@ -96,6 +96,7 @@ const Content = () => {
                                 key={singleData.id}
                                 id={singleData.id}
                                 changeOperator = {changeOperator}
+                                operator = {operator}
                             />
                         )})}
                     <div className="btn" onClick={equalClicked}>

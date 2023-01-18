@@ -1,11 +1,12 @@
-const OperatorBtn = ({id, changeOperator}) => {
+import "./OperatorBtn.css"
+const OperatorBtn = ({id, changeOperator, operator}) => {
 
     const handleClick = () => {
         changeOperator(id)
     }
 
     return (
-        <div className="btn" onClick={handleClick}>
+        <div className={operator.includes(id) ? "btn active" : "btn"} onClick={handleClick}>
             <span>{id}</span>
         </div>
     )
