@@ -1,5 +1,5 @@
 import "./Content.css"
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import NumberBtn from './NumberBtn/NumberBtn'
 import OperatorBtn from './OperatorBtn/OperatorBtn'
 const Content = () => {
@@ -15,8 +15,6 @@ const Content = () => {
         {id:"+"}, {id:"-"}, {id:"*"}, {id:"/"}
     ]
 
-
-
     const changeFirstNumbers = prevState => {
         setFirstNumbers(prevState)
     }
@@ -26,9 +24,6 @@ const Content = () => {
     const changeOperator = prevState => {
         setOperator(prevState)
     }
-
-    useEffect(() => console.log(firstNumbers),[firstNumbers])
-    useEffect(() => console.log(operator),[operator])
 
     const equalClicked = () => {
         const firstNum = parseInt(firstNumbers)
@@ -69,7 +64,13 @@ const Content = () => {
 
     return (
         <div className="content">
-            <div className="display"><span>{secondNumbers === "" ? (firstNumbers === "" ? "" : firstNumbers) : secondNumbers}</span></div>
+            <div className="display">
+                <span>
+                    {secondNumbers === "" ?
+                        (firstNumbers === "" ? "0" : firstNumbers)
+                        : secondNumbers}
+                </span>
+            </div>
             <div className="flex-container-row">
                 <div className="flex-container-column numbers">
                     {data.map((singleData) => {
