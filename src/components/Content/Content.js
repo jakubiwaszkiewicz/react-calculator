@@ -29,27 +29,43 @@ const Content = () => {
         const firstNum = parseInt(firstNumbers)
         const secondNum = parseInt(secondNumbers)
         let result = 0
-        const CCleaner = (result) => {
+
+        const stateAssignment = (result) => {
             setFirstNumbers(result.toString())
             setSecondNumbers("")
             setOperator("")
         }
+
+        const lengthResultChecker = (result) => {
+            if (result.toString().length >= 15) {
+                result = result.toExponential()
+            }
+            return result
+        }
+
         switch(operator) {
             case "+":
                 result = firstNum + secondNum
-                CCleaner(result)
+                lengthResultChecker(result)
+                stateAssignment(result)
                 break;
             case "-":
                 result = firstNum - secondNum
-                CCleaner(result)
+                stateAssignment(result)
                 break;
             case "*":
                 result = firstNum * secondNum
-                CCleaner(result)
+                if (result.toString().length >= 15) {
+                    result = result.toExponential()
+                }
+                stateAssignment(result)
                 break;
             case "/":
                 result = firstNum / secondNum
-                CCleaner(result)
+                stateAssignment(result)
+                if (result.toString().length >= 15) {
+                    result = result.toExponential()
+                }
                 break;
             default:
                 break;
